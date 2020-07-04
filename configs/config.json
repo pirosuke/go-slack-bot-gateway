@@ -1,0 +1,10 @@
+{
+    "log_dir": "/path/to/log/dir",
+    "host": ":18080",
+    "backends": [
+        {
+            "callback_prefix": "hydration",
+            "host": ":18081"
+        }
+    ]
+}
