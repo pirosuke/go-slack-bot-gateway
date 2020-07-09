@@ -79,6 +79,8 @@ func getCallbackIDFromPayload(payloadJSON string) (string, error) {
 		iCallbackID, _ = jsonpointer.Get(payload, "/callback_id")
 	case "view_submission":
 		iCallbackID, _ = jsonpointer.Get(payload, "/view/callback_id")
+	case "block_actions":
+		iCallbackID, _ = jsonpointer.Get(payload, "/actions/0/action_id")
 	}
 
 	return iCallbackID.(string), nil
